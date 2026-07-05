@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global safety net: default-deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Rules for app_state collection
+    match /app_state/{document} {
+      // Allow read/write access to app_state documents (alumni, settings, test_conn_client)
+      allow read, write: if true;
+    }
+  }
+}

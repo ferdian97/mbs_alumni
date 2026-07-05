@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "Alumni": {
+      "title": "Alumni",
+      "description": "Alumni of MBS",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "classYear": { "type": "string" },
+        "major": { "type": "string" },
+        "profession": { "type": "string" },
+        "city": { "type": "string" },
+        "country": { "type": "string" },
+        "linkedIn": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "photo": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "name"]
+    },
+    "Settings": {
+      "title": "Settings",
+      "description": "App settings",
+      "type": "object",
+      "properties": {
+        "sheetUrl": { "type": "string" },
+        "customLogo": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "/app_state/alumni": {
+      "schema": "Alumni",
+      "description": "Stored list of alumni"
+    },
+    "/app_state/settings": {
+      "schema": "Settings",
+      "description": "App configurations"
+    }
+  }
+}

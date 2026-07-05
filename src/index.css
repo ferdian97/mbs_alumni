@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base body styles supporting smooth transitions */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* Redefine Tailwind's slate color palette inside .light class */
+.light {
+  --color-slate-950: #f8fafc; /* slate-50 */
+  --color-slate-900: #ffffff; /* pure white for cards */
+  --color-slate-850: #cbd5e1; /* slate-300 for border-slate-850 */
+  --color-slate-800: #cbd5e1; /* slate-300 for border-slate-800 */
+  --color-slate-700: #94a3b8; /* slate-400 for borders/dividers */
+  --color-slate-600: #64748b; /* slate-500 */
+  --color-slate-500: #475569; /* slate-600 */
+  --color-slate-400: #334155; /* slate-700 for body descriptions */
+  --color-slate-300: #1e293b; /* slate-800 for subheaders */
+  --color-slate-200: #0f172a; /* slate-900 */
+  --color-slate-100: #020617; /* slate-950 for primary titles and texts */
+
+  /* Contrast-optimized colors for accents & badges in Light Mode */
+  --color-emerald-400: #059669; /* emerald-600 */
+  --color-teal-400: #0d9488; /* teal-600 */
+  --color-amber-400: #d97706; /* amber-600 */
+  --color-indigo-400: #4f46e5; /* indigo-600 */
+  --color-blue-400: #2563eb; /* blue-600 */
+  --color-pink-400: #db2777; /* pink-600 */
+  --color-rose-400: #e11d48; /* rose-600 */
+  --color-sky-400: #0284c7; /* sky-600 */
+  --color-purple-400: #7c3aed; /* purple-600 */
+}
+
+/* Custom modern scrollbars adjusted for light/dark mode */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.4);
+}
+
